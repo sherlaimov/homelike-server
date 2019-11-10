@@ -1,19 +1,18 @@
 const createService = require('feathers-mongodb');
-const hooks = require('./apartments.hooks');
+const hooks = require('./countries.hooks');
 
 module.exports = function() {
   const app = this;
   const mongoClient = app.get('mongoClient');
 
-  const apartmentService = createService({});
-  app.use('/apartments', apartmentService);
+  const countryService = createService({});
+  app.use('/countries', countryService);
 
-  const service = app.service('apartments');
+  const service = app.service('countries');
 
   mongoClient.then(db => {
-    service.Model = db.collection('apartments');
+    service.Model = db.collection('countries');
     service.Model.createIndex({ title: 'text' });
   });
-
   service.hooks(hooks);
 };

@@ -12,6 +12,7 @@ module.exports = function() {
 
   mongoClient.then(db => {
     service.Model = db.collection('locations');
+    service.Model.createIndex({ title: 'text' });
   });
   service.hooks(hooks);
 };
