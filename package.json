@@ -42,7 +42,7 @@
     "feathers-mongodb": "^2.9.1",
     "feathers-mongodb-fuzzy-search": "^1.1.1",
     "feathers-rest": "^1.8.0",
-    "flat": "^2.0.1",
+    "flat": "^5.0.1",
     "graphql": "^0.11.7",
     "graphql-server-express": "^1.2.0",
     "graphql-tools": "^1.2.3",
